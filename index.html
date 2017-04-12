@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="jquery.fullPage.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,600" rel="stylesheet">
+</head>
+<body>
+	<!--preloader-->
+	
+<div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
+
+	<!--fullpage-->
+	<div id="fullpage">
+		<div class="section" id="section0"><h1>тракт ойл см</h1></div>
+		<div class="section" id="section1">
+			<div class="container">
+				<h2 class="company-h2">о компании</h2>
+				<p class="company-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus praesentium nulla adipisci delectus dignissimos aliquid laborum quasi est repudiandae, dicta, nemo necessitatibus unde deserunt nisi atque, dolor. Velit, deserunt, ut!</p>
+				<div class="company-wrapper">
+					<div class="company-img"></div>
+					<div class="company-text"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="section2"><h1>Наши услуги</h1></div>
+		<div class="section" id="section3"><h1>Каталог</h1></div>
+		<div class="section" id="section4"><h1>Где купить</h1></div>
+		<div class="section" id="section5"><h1>Сотрудники</h1></div>
+		<div class="section" id="section6"><h1>Сертификаты</h1></div>
+		<div class="section" id="section7"><h1>Наши бренды</h1></div>
+		<div class="section" id="section8">
+			<div class="container">
+				<h2 class="contact-h2">контакты</h2>
+				<div class="contact-wrapper">
+					<div class="contact-text">
+						<div class="office">
+							<h3>офис</h3>
+							<p><strong>Адрес:</strong><br>г. Костанай, ул. Тарана 155 каб.34</p>
+							<p><strong>Телефон:</strong><br>+7 (705) 564-87-52</p>
+							<p><strong>E-mail:</strong><br>zhas777kz@gmail.com</p>
+							<p><strong>Время работы:</strong><br>Пн-Пт: 9:00 - 18:00 / Сб-Вс: выходной</p>
+						</div>
+						<div class="magazine">
+							<h3>магазин</h3>
+							<p><strong>Адрес</strong><br>г. Костанай, ул. Тарана 155 каб.34</p>
+							<p><strong>Телефон</strong><br>+7 (705) 564-87-52</p>
+							<p><strong>E-mail</strong><br>zhas777kz@gmail.com</p>
+							<p><strong>Время работы:</strong><br>Пн-Пт: 9:00 - 18:00 / Сб-Вс: выходной</p>
+						</div>
+					</div>
+					<div id="map" class="contact-map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery.fullPage.min.js"></script>
+ <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['Главная', 'О компании', 'Наши услуги', 'Каталог', 'Где купить','Сотрудники', 'Сертификаты', 'Наши бренды', 'контакты' ],
+				sectionsColor: ['#2E3037', '#2E3037', '#2E3037','#2E3037','#2E3037','#2E3037','#2E3037','#2E3037','#2E3037'],
+				navigation: true,
+				navigationPosition: 'left',
+				navigationTooltips: ['Главная', 'О компании', 'Наши услуги', 'Каталог', 'Где купить','Сотрудники', 'Сертификаты', 'Наши бренды', 'контакты']
+			});
+		});
+	</script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>	
+<script src="script.js"></script>
+</body>
+</html>
