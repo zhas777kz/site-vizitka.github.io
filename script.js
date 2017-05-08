@@ -12,8 +12,20 @@ function fadeOutnojquery(el){
     setTimeout(function(){
       fadeOutnojquery(hellopreloader);},1000);};
 
-
-    /*яндекс карты*/
+/*табы*/
+$(function () {
+    var tabContainers = $('div.tabs > div'); // получаем массив контейнеров
+    tabContainers.hide().filter(':first').show(); // прячем все, кроме первого
+    // далее обрабатывается клик по вкладке
+    $('div.tabs ul.tabNavigation a').click(function () {
+        tabContainers.hide(); // прячем все табы
+        tabContainers.filter(this.hash).show(); // показываем содержимое текущего
+        $('div.tabs ul.tabNavigation a').removeClass('selected'); // у всех убираем класс 'selected'
+        $(this).addClass('selected'); // текушей вкладке добавляем класс 'selected'
+        return false;
+    }).filter(':first').click();
+});
+/*яндекс карты*/
 
 ymaps.ready(init);
     var myMap,
@@ -22,7 +34,7 @@ ymaps.ready(init);
 
     function init(){     
         myMap = new ymaps.Map("map", {
-            center: [53.22095249, 63.61825563],
+            center: [53.22115854, 63.61327745],
             zoom: 15.5,
             controls: ['zoomControl']
         });
